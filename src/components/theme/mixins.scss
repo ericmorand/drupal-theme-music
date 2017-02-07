@@ -1,0 +1,9 @@
+@mixin identify($name) {
+  border: solid 2px red;
+
+  &:before {
+    content: "#{$name}";
+    display: block;
+    background: tomato;
+  }
+}

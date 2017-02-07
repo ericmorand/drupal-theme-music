@@ -1,0 +1,31 @@
+@import "index";
+@import "../demo/index";
+@import "../theme/breakpoint/index";
+@import "../theme/rtl/index";
+@import "../body/lib/mixins";
+
+.demo-breakpoint {
+  @include body;
+
+  .test {
+    height: 100vh;
+    width: 50%;
+    @include rtl-sass-float(left);
+    background-size: contain;
+    background-image: url("http://placehold.it/240x50");
+
+    @include breakpoint(min-width $theme--breakpoint--md) {
+      background-image: url("http://placehold.it/512x50");
+    }
+
+    @include breakpoint(min-width $theme--breakpoint--lg) {
+      background-image: url("http://placehold.it/960x50");
+    }
+  }
+
+  &:after {
+    clear: both;
+    display: block;
+    content: "";
+  }
+}

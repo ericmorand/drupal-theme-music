@@ -1,0 +1,14 @@
+@mixin clear-float() {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@mixin vertical-centerer() { //todo: find a better name
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}

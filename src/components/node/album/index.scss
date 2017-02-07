@@ -1,0 +1,19 @@
+.album {
+  background: tomato;
+
+  .cover-art {
+    width: 25%;
+
+    img {
+      width: 100%;
+    }
+
+    label {
+      display: none;
+    }
+  }
+
+  .tracks {
+    background: aliceblue;
+  }
+}

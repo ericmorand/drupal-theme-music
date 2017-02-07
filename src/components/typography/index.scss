@@ -1,0 +1,50 @@
+@import "../../../node_modules/rtl-sass/src/padding";
+@import "../font/lib/mixins";
+@import "../theme/typography/index";
+@import "../theme/font/index.scss";
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $theme--typography--h1--font-size;
+}
+
+h2 {
+  font-size: $theme--typography--h2--font-size;
+}
+
+h3 {
+  font-size: $theme--typography--h3--font-size;
+}
+
+.caption {
+  font-size: $theme--typography--h3--font-size;
+  font-weight: 700;
+}
+
+$line-height: 2.50em;
+
+blockquote {
+  @include primary-font();
+  margin: 0;
+  font-size: 1.25em;
+  color: #aeaeae;
+  line-height: 1.0em;
+
+  &:before, &:after {
+    font-size: 1.50em;
+  }
+
+  &:before {
+    content: "\201C";
+    @include rtl-sass-padding-right(0.10em)
+  }
+
+  &:after {
+    content: "\201E";
+    @include rtl-sass-padding-left(0.10em)
+  }
+}

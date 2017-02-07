@@ -1,0 +1,5 @@
+<div class="direction-selector">
+    <select v-model="value">
+        <option v-for="direction in directions" v-bind:value="direction.code">{{ direction.name }}</option>
+    </select>
+</div>

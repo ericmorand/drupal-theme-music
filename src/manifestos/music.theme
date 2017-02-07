@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Music theme.
+ */
+
+function music_preprocess_image(&$variables) {
+    if (isset($variables['attributes']['width']) && isset($variables['attributes']['height'])) {
+        unset($variables['attributes']['width']);
+        unset($variables['attributes']['height']);
+    }
+}

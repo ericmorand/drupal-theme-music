@@ -1,0 +1,13 @@
+<div class="demo" v-cloak>
+    <div class="demo-header">
+        <h1>{{ title }}</h1>
+        <demo-direction-selector v-bind:direction="direction" v-bind:directions="directions"></demo-direction-selector>
+    </div>
+    <div v-bind:dir="direction.code">
+        <div class="demo-body">
+            <slot name="content">
+                This will only be displayed if there is no content to be distributed.
+            </slot>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+@import "../breakpoint/index";
+
+$theme--body--font-sizes: (
+        $theme--breakpoint--sm: 18px,
+        $theme--breakpoint--md: 16px,
+        $theme--breakpoint--lg: 14px
+);

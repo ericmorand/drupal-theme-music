@@ -1,0 +1,34 @@
+// latin
+$fontWeights: (
+        100: "Thin",
+        400: "Regular",
+        700: "Medium"
+);
+
+@each $fontWeight, $fontName in $fontWeights {
+  $fontStyles: (
+          normal: "",
+          italic: "Italic"
+  );
+
+  @each $fontStyle, $fontStyleName in $fontStyles {
+    $fontFileName: #{$fontName}#{$fontStyleName};
+
+    @if (($fontName == "Regular") and ($fontStyle == "italic")) {
+      $fontFileName: "Italic";
+    }
+
+    @font-face {
+      font-family: 'Primary';
+      font-style: $fontStyle;
+      font-weight: $fontWeight;
+      src: url("assets/Roboto/Roboto-#{$fontFileName}.ttf") format("truetype");
+    }
+  }
+}
+
+// no space
+@font-face {
+  font-family: 'NoSpace';
+  src: url("assets/NoSpace/zerowidthspaces.ttf") format("truetype");
+}

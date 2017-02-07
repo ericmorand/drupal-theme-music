@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Symfony2PluginSettings">
+    <option name="pluginEnabled" value="true" />
+    <option name="twigNamespaces">
+      <list>
+        <twig_namespace custom="true" namespace="music" namespaceType="ADD_PATH" path="src/components" />
+        <twig_namespace custom="true" namespace="node" namespaceType="ADD_PATH" path="node_modules/drupal8-templates/src/core/modules/node/templates" />
+        <twig_namespace custom="true" namespace="system" namespaceType="ADD_PATH" path="node_modules/drupal8-templates/src/core/modules/system/templates" />
+        <twig_namespace custom="true" namespace="classy" namespaceType="ADD_PATH" path="node_modules/drupal8-templates/src/core/themes/classy/templates" />
+      </list>
+    </option>
+  </component>
+</project>

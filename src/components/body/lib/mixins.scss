@@ -1,0 +1,22 @@
+@import "../../theme/color/index";
+@import "../../theme/breakpoint/index";
+@import "../../theme/body/index";
+
+@mixin body() {
+  margin: 0;
+  padding: 0;
+  background-color: $theme--color--background-color--dark;
+  color: $theme--color--text-color--on-dark;
+  height: 100%;
+  overflow: auto;
+
+  font-size: map_get($theme--body--font-sizes, $theme--breakpoint--sm);
+
+  @include breakpoint(min-width $theme--breakpoint--md) {
+    font-size: map_get($theme--body--font-sizes, $theme--breakpoint--md);
+  }
+
+  @include breakpoint(min-width $theme--breakpoint--lg) {
+    font-size: map_get($theme--body--font-sizes, $theme--breakpoint--lg);
+  }
+}

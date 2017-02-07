@@ -1,0 +1,7 @@
+@import "../ref";
+
+@function ref-size-to-em($ref-size, $breakpoint) {
+  $theme-ref--font-size: map-get($theme--ref--font-sizes, $breakpoint);
+
+  @return ($ref-size / $theme-ref--font-size) * 1em;
+}

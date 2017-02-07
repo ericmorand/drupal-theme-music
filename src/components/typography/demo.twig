@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Typography demo</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="app">
+    <demo title="Typography" class="demo-typography" v-bind:directions="{{ directions|json_encode|escape }}">
+        <div slot="content">
+            {% for language in languages %}
+                <div class="demo-content">
+                    <h2 class="demo-h2">Headings</h2>
+                    <section>
+                        <h3 class="demo-h3">Heading 1</h3>
+                        <h1>{{ language.lorem.short }}</h1>
+                    </section>
+                    <section>
+                        <h3 class="demo-h3">Heading 2</h3>
+                        <h2>{{ language.lorem.short }}</h2>
+                    </section>
+                    <section>
+                        <h3 class="demo-h3">Heading 3</h3>
+                        <h3>{{ language.lorem.short }}</h3>
+                    </section>
+                </div>
+                <div class="demo-content">
+                    <h2 class="demo-h2">Quote</h2>
+                    <section>
+                        <blockquote>{{ language.lorem.long }}</blockquote>
+                    </section>
+                </div>
+            {% endfor %}
+        </div>
+    </demo>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

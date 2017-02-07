@@ -1,0 +1,10 @@
+@import "../demo/index";
+@import "index";
+
+.demo-body {
+  height: 50vh;
+
+  > div {
+    @include body;
+  }
+}
